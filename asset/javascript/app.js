@@ -14,11 +14,11 @@ var questions = [{
 },{
     question: "\"Which Boeing planes was recently taken off the air?",
     answerList: ["Boeing 737\"", "Boeing 737Max's\"", "Boeing 747\"", "Boeing 712\""],
-    answer: 2
+    answer: 1
 },{
     question: "\"Where is the headquarters of Boeing?",
     answerList: ["New Delhi\"", "Atlanta\"", "chicago\"", "New York\""],
-    answer: 3
+    answer: 2
 },{
    
 }];
@@ -37,7 +37,7 @@ $("#start").on("click", function() {
 
     // Qtn 1
     $("#question1").html("<h3>" + questions[0].question + "</h3>");
-    $("#answer1").html("<input type='radio' name='answerOne' value='0'>" + "<label>" + questions[0].answerList[0] + "</label>"
+    $("#answer1").html("<input type='radio' name='answer1' value='0'>" + "<label>" + questions[0].answerList[0] + "</label>"
         + "<input type='radio' name='answer1' value='1'>" + "<label>" + questions[0].answerList[1] + "</label>"
         + "<input type='radio' name='answer1' value='2'>" + "<label>" + questions[0].answerList[2] + "</label>"
         + "<input type='radio' name='answer1' value='3'>" + "<label>" + questions[0].answerList[3] + "</label><br><br>"
@@ -45,7 +45,7 @@ $("#start").on("click", function() {
 
     // Qtn 2
     $("#question2").html("<h3>" + questions[1].question + "</h3>");
-    $("#answer2").html("<input type='radio' name='answerTwo' value='0'>" + "<label>" + questions[1].answerList[0] + "</label>"
+    $("#answer2").html("<input type='radio' name='answer2' value='0'>" + "<label>" + questions[1].answerList[0] + "</label>"
         + "<input type='radio' name='answer2' value='1'>" + "<label>" + questions[1].answerList[1] + "</label>"
         + "<input type='radio' name='answer2' value='2'>" + "<label>" + questions[1].answerList[2] + "</label>"
         + "<input type='radio' name='answer2' value='3'>" + "<label>" + questions[1].answerList[3] + "</label><br><br>"
@@ -53,7 +53,7 @@ $("#start").on("click", function() {
 
     // Qtn 3
     $("#question3").html("<h3>" + questions[2].question + "</h3>");
-    $("#answer3").html("<input type='radio' name='answerThree' value='0'>" + "<label>" + questions[2].answerList[0] + "</label>"
+    $("#answer3").html("<input type='radio' name='answer3' value='0'>" + "<label>" + questions[2].answerList[0] + "</label>"
         + "<input type='radio' name='answer3' value='1'>" + "<label>" + questions[2].answerList[1] + "</label>"
         + "<input type='radio' name='answer3' value='2'>" + "<label>" + questions[2].answerList[2] + "</label>"
         + "<input type='radio' name='answer3' value='3'>" + "<label>" + questions[2].answerList[3] + "</label><br><br>"
@@ -131,6 +131,9 @@ function keepingScore() {
     var userAnswer2 = $("input[name='answer2']:checked").val();
     var userAnswer3 = $("input[name='answer3']:checked").val();
 
+    console.log(userAnswer1);
+    console.log(userAnswer2);
+    console.log(userAnswer3);
 
     if (userAnswer1 === undefined) {
 
